@@ -15,6 +15,6 @@ class Tests(unittest.TestCase):
         self.assertIsInstance(
                 compare.which_is_larger(3,3),
                 tuple)
-
+    #TODO write 3 tests for compare.compare_strings()
 if __name__ == '__main__':
     unittest.main()
