@@ -3,18 +3,25 @@ import compare
 import unittest
 
 class Tests(unittest.TestCase):
-    def test1(self):
+    def test_number2_larger(self):
+        number1 = 1
+        number2 = 2
         self.assertIs(
-                compare.which_is_larger(1,2),
-                2)
-    def test2(self):
+                compare.which_is_larger(number1, number2),
+                number2)
+    def test_number1_larger(self):
+        number1 = 6
+        number2 = 3
         self.assertIs(
-                compare.which_is_larger(6,3),
-                6)
-    def test3(self):
+                compare.which_is_larger(number1, number2),
+                number1)
+    def test_both_equal(self):
+        number1 = 3
+        number2 = 3
         self.assertIsInstance(
-                compare.which_is_larger(3,3),
+                compare.which_is_larger(number1, number2),
                 tuple)
+
     #TODO write 3 tests for compare.compare_strings()
 if __name__ == '__main__':
     unittest.main()
